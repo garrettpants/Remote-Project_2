@@ -22,8 +22,11 @@ public:
         this->input = input;
         CreateAutomata();
         Run();
+
     }
     ~Lexer();
+
+    vector<Token*> getLexer();
 
     void Run();
 

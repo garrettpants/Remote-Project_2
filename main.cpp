@@ -4,6 +4,9 @@
 #include <unistd.h>
 #include <sstream>
 #include "Lexer.h"
+#include "Lexer.cpp"
+#include "Parser.h"
+
 
 using namespace std;
 
@@ -36,7 +39,8 @@ int main(int argc, char** argv) {
 
     Lexer* lexer = new Lexer(str);
 
+    Parser* parser = new Parser(lexer->getLexer);
     delete lexer;
 
     return 0;
-}""
+}

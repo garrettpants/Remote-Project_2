@@ -92,3 +92,7 @@ void Lexer::print(const vector <Token*> &tokens) {
     unsigned int count = tokens.size();
     cout << "Total Tokens = " << count;
 }
+
+vector <Token*> Lexer::getLexer() {
+    return tokens;
+}

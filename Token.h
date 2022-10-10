@@ -34,9 +34,7 @@ enum class TokenType {
 
 class Token {
 private:
-    TokenType type;
-    string description;
-    unsigned int lineNum;
+
 
     string tokenToString(TokenType T) {
         switch (T) {
@@ -82,6 +80,11 @@ private:
     }
 
 public:
+
+    TokenType type;
+    string description;
+    unsigned int lineNum;
+
     Token(TokenType type, string description, unsigned int lineNum) {
         this->type = type;
         this->description = description;

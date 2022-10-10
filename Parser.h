@@ -6,6 +6,7 @@
 #define INC_236_PROJECT_2_PARSER_H
 #include <vector>
 #include "Token.h"
+#include "DatalogProgram.h"
 
 class Parser {
 
@@ -14,13 +15,14 @@ private:
     vector<Token> tokens;
 
 public:
-    Parser();
-    void Match();
+    Parser(Token);
+
+    Parse (vector<Token*> tokens);
+    void Scheme(vector<Token*> &tokens, DatalogProgram* &program);
+    void Predicate(vector<Token*> &tokens, DatalogProgram* &program, )
+    //void Match(TokenType);
 };
 
-DatalogProgram Parser::Parse() {
-
-}
 
 
 
