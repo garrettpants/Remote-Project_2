@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
 
     Lexer* lexer = new Lexer(str);
 
-    Parser* parser = new Parser(lexer->getLexer);
+    Parser* parser = new Parser(lexer->getLexer());
     delete lexer;
 
     return 0;

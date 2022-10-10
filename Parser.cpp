@@ -5,67 +5,60 @@
 #include "Parser.h"
 #include "DatalogProgram.h"
 
-void Match(TokenType type);
+Parser::Parser(vector<Token *> tokenVector) {
+    this->tokens = tokenVector;
+}
 
-DatalogProgram* Parse(vector<Token*> tokens) {
+void Parser::Match(TokenType type) {
+    if (tokens[0]->type == type) {
+        // TODO tokens.delete
+        tokens.erase(tokens.begin());
+    } else {
+        throw tokens[0];
+    }
+};
+
+
+DatalogProgram* Parser::datalogProgram() {
     try {
-        DatalogProgram *program = new DatalogProgram;
-        Scheme(tokens, program);
-        Facts(tokens, program);
-        Rules(tokens, program);
-        Queries(tokens, program);
-        return program;
-    } catch (Token* error) {
-           // error->failure(error->toString(), error->getDescription(), error)]
-           exit(0);
+        Match(TokenType::SCHEMES);
+        Match(TokenType::COLON);
+        scheme();
+        schemeList();
+        Match(TokenType::FACTS);
+        Match(TokenType::COLON);
+        factList();
+        Match(TokenType::RULES);
+        Match(TokenType::COLON);
+        ruleList();
+        Match(TokenType::QUERIES);
+        Match(TokenType::COLON);
+        query();
+        queryList();
+        Match(TokenType::END_OF_FILE);
+    }
+    catch (Token *T) {
+//TODO add cout
+
     }
 }
 
 
-void Parser::Scheme(vector<Token*> &tokens, DatalogProgram* &program) {
-    if (tokens[0]->type == TokenType::SCHEMES) {
-        tokens.erase(tokens.begin());
-    } else {
-        throw(tokens[0]);
-    }
-    if (tokens[0]->type == TokenType::COLON) {
-        tokens.erase(tokens.begin());
-    } else {
-        throw(tokens[0]);
-    }
+void Parser::scheme() {
     if (tokens[0]->type == TokenType::ID) {
-        Predicate(tokens, program, "")
 
     }
+}
 
+void Parser::Predicate() {
 
 }
+
+
+
 
 
 /*
-try {
-Match(TokenType::SCHEMES);
-Match(TokenType::COLON);
-currentState = TokenType::SCHEMES;
-scheme();
-schemeList();
-Match(TokenType::FACTS);
-Match(TokenType::COLON);
-currentState = TokenType::FACTS;
-factList();
-Match(TokenType::RULES);
-Match(TokenType::COLON);
-currentState = TokenType::RULES;
-ruleList();
-Match(TokenType::QUERIES);
-Match(TokenType::COLON);
-currentState = TokenType::QUERIES;
-query();
-queryList();
-Match(TokenType::END_OF_FILE);
-}
-catch (Token* T) {
-
 }
 
 void Match(TokenType T) { //build match function
@@ -77,6 +70,21 @@ void Match(TokenType T) { //build match function
     }
     else {
         throw (tokens[index1]);
+    }
+} */
+
+/*
+DatalogProgram* Parse() {
+    try {
+        DatalogProgram *program = new DatalogProgram;
+        Scheme(tokens, program);
+        Facts(tokens, program);
+        Rules(tokens, program);
+        Queries(tokens, program);
+        return program;
+    } catch (Token* error) {
+           // TODO error->failure(error->toString(), error->getDescription(), error)]
+           exit(0);
     }
 } */
 

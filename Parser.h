@@ -12,15 +12,17 @@ class Parser {
 
 private:
     DatalogProgram program;
-    vector<Token> tokens;
+    vector<Token*> tokens;
 
 public:
-    Parser(Token);
+    Parser(vector<Token*> tokenVector);
 
-    Parse (vector<Token*> tokens);
-    void Scheme(vector<Token*> &tokens, DatalogProgram* &program);
-    void Predicate(vector<Token*> &tokens, DatalogProgram* &program, )
-    //void Match(TokenType);
+    Parse ();
+    void scheme();
+    void Predicate();
+    void Match(TokenType);
+
+    DatalogProgram *datalogProgram();
 };
 
 
