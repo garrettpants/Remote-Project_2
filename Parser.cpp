@@ -46,8 +46,9 @@ DatalogProgram* Parser::datalogProgram() {
 
 void Parser::scheme() {
     if (tokens[0]->type == TokenType::ID) {
-
+    //TODO
     }
+    
 }
 
 void Parser::Predicate() {

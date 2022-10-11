@@ -22,7 +22,7 @@ public:
     void Predicate();
     void Match(TokenType);
 
-    DatalogProgram *datalogProgram();
+    DatalogProgram* datalogProgram();
 };
 
 
