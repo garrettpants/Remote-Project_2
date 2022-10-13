@@ -18,9 +18,12 @@ public:
     Parser(vector<Token*> tokenVector);
 
     Parse ();
+    void match(TokenType);
     void scheme();
-    void Predicate();
-    void Match(TokenType);
+    void schemeList();
+    void predicate();
+    TokenType peek();
+
 
     DatalogProgram* datalogProgram();
 };

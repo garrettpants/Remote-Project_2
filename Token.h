@@ -96,6 +96,14 @@ public:
         return ss.str();
     }
 
+    TokenType getType() {
+        return type;
+    }
+
+    const string &getDescription() const {
+        return description;
+    }
+
 };
 
 

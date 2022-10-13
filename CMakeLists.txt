@@ -24,4 +24,4 @@ add_executable(236_Project_1 main.cpp
         Schemes.h
         String.h
         Token.h
-        Parser.h DatalogProgram.h Parser.cpp)
+        Parser.h DatalogProgram.h Parser.cpp Predicate.h Parameter.h)

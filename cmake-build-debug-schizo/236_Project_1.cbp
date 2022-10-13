@@ -121,6 +121,9 @@
 		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Multiply.h">
 			<Option target="236_Project_1"/>
 		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Parameter.h">
+			<Option target="236_Project_1"/>
+		</Unit>
 		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Parser.cpp">
 			<Option target="236_Project_1"/>
 		</Unit>
@@ -128,6 +131,9 @@
 			<Option target="236_Project_1"/>
 		</Unit>
 		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Period.h">
+			<Option target="236_Project_1"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Predicate.h">
 			<Option target="236_Project_1"/>
 		</Unit>
 		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Q_Mark.h">

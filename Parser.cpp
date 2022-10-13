@@ -4,12 +4,14 @@
 
 #include "Parser.h"
 #include "DatalogProgram.h"
+#include "Parameter.h"
+#include "Predicate.h"
 
 Parser::Parser(vector<Token *> tokenVector) {
     this->tokens = tokenVector;
 }
 
-void Parser::Match(TokenType type) {
+void Parser::match(TokenType type) {
     if (tokens[0]->type == type) {
         // TODO tokens.delete
         tokens.erase(tokens.begin());
@@ -21,37 +23,58 @@ void Parser::Match(TokenType type) {
 
 DatalogProgram* Parser::datalogProgram() {
     try {
-        Match(TokenType::SCHEMES);
-        Match(TokenType::COLON);
+        match(TokenType::SCHEMES);
+        match(TokenType::COLON);
         scheme();
         schemeList();
-        Match(TokenType::FACTS);
-        Match(TokenType::COLON);
+        match(TokenType::FACTS);
+        match(TokenType::COLON);
         factList();
-        Match(TokenType::RULES);
-        Match(TokenType::COLON);
+        match(TokenType::RULES);
+        match(TokenType::COLON);
         ruleList();
-        Match(TokenType::QUERIES);
-        Match(TokenType::COLON);
+        match(TokenType::QUERIES);
+        match(TokenType::COLON);
         query();
         queryList();
-        Match(TokenType::END_OF_FILE);
+        match(TokenType::END_OF_FILE);
     }
     catch (Token *T) {
-//TODO add cout
-
+        cout << "Failure!\n" << tokens[0]->toString(); //TODO double check tostring()
     }
 }
 
 
 void Parser::scheme() {
-    if (tokens[0]->type == TokenType::ID) {
-    //TODO
+    match(TokenType::ID);
+    Predicate* newPred = new Predicate;
+    newPred->addID(tokens[0]->getDescription());
+    match(TokenType::LEFT_PAREN);
+
+    if (peek()==TokenType::ID) {
+        Parameter* parameter1 = new Parameter(tokens[0]->getDescription());
+        newPred->stringPredAdd(parameter1);
     }
-    
+    match(TokenType::ID);
+    idList(newPred);
+    match(TokenType::RIGHT_PAREN);
+    schemes.push_back(newPred);
 }
 
-void Parser::Predicate() {
+void Parser::schemeList() {
+    if (peek() == TokenType::FACTS) {
+        return;
+    } else {
+        scheme();
+        schemeList();
+    }
+}
+
+TokenType Parser::peek() {
+    return tokens[1]->getType();
+}
+
+void Parser::predicate() {
 
 }
 
@@ -62,7 +85,7 @@ void Parser::Predicate() {
 /*
 }
 
-void Match(TokenType T) { //build match function
+void match(TokenType T) { //build match function
     if (T == tokens[index1]->type) {
         if (T == TokenType::STRING && currentState == TokenType::Facts) {
             domainList.insert(tokens[index1]->description);
