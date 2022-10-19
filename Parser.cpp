@@ -6,6 +6,7 @@
 #include "DatalogProgram.h"
 #include "Parameter.h"
 #include "Predicate.h"
+#include "P2Rules.h"
 
 Parser::Parser(vector<Token *> tokenVector) {
     this->tokens = tokenVector;
@@ -68,6 +69,45 @@ void Parser::schemeList() {
         scheme();
         schemeList();
     }
+}
+
+void Parser::fact() {
+    match(TokenType::ID);
+    Predicate* newPred = new Predicate;
+    newPred->addID(tokens[0]->getDescription()); //TODO check if you need to adjust tokens[x]
+    match(TokenType::LEFT_PAREN);
+    if (peek() == TokenType::STRING) {
+        Parameter* parameter1 = new Parameter(tokens[0]->getDescription());
+        domain.insert(parameter1->parToString());
+        newPred->stringPredAdd(parameter1);
+    }
+    match(TokenType::STRING);
+
+    stringList(newPred);
+    match(TokenType::RIGHT_PAREN);
+    match(TokenType::PERIOD);
+    facts.push_back(newPred);
+}
+
+void Parser::factlist() {
+    if (peek() == TokenType::COLON) {
+        return;
+    } else {
+        fact();
+        factlist();
+    }
+}
+
+void Parser::rule() {
+    P2Rules* rules1 = new P2Rules();
+    Predicate* newHeadPred = new Predicate;
+    headPredicate(newHeadPred);
+    rules1->setHeadPredicate(newHeadPred);
+
+    match(TokenType::COLON_DASH);
+    Predicate* bodyPred = new Predicate;
+    predicate(bodyPred);
+    rules1->addBodyPredicate(bodyPred);
 }
 
 TokenType Parser::peek() {
