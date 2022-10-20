@@ -4,12 +4,6 @@
 
 #ifndef INC_236_PROJECT_1_DATALOG_H
 #define INC_236_PROJECT_1_DATALOG_H
-//
-// Created by garre on 10/4/2022.
-//
-
-#ifndef INC_236_PROJECT_2_PARSER_H
-#define INC_236_PROJECT_2_PARSER_H
 
 #include <vector>
 #include "Token.h"
@@ -56,7 +50,4 @@ private:
 
 
 };
-
-#endif //INC_236_PROJECT_2_PARSER_H
-
 #endif //INC_236_PROJECT_1_DATALOG_H

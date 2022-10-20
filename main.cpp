@@ -4,7 +4,6 @@
 #include <unistd.h>
 #include <sstream>
 #include "Lexer.h"
-#include "Lexer.cpp"
 #include "Datalog.h"
 
 

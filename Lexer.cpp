@@ -46,7 +46,7 @@ void Lexer::CreateAutomata() {
     //automata.push_back(new UNDEFINED());
 }
 
-void Lexer::Run() {
+vector<Token*> Lexer::Run() {
     unsigned int lineNum = 1;
     while (!input.empty()) {
         unsigned int maxRead = 0;
@@ -84,7 +84,8 @@ void Lexer::Run() {
         input.erase(0, maxRead);
     }
     tokens.push_back(new Token(TokenType::END_OF_FILE, "", lineNum));
-    print(tokens);
+    //print(tokens);
+    return tokens;
 }
 
 void Lexer::print(const vector <Token*> &tokens) {
@@ -95,6 +96,6 @@ void Lexer::print(const vector <Token*> &tokens) {
     cout << "Total Tokens = " << count;
 }
 
-vector <Token*> Lexer::getLexer() {
+const vector <Token*> &Lexer::getLexer() const {
     return tokens;
 }

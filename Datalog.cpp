@@ -12,9 +12,9 @@ Datalog::~Datalog() {
 }
 
 void Datalog::match(TokenType type) {
-    if (tokens[0]->type == type) {
-        // TODO tokens.delete
+    if (type == tokens[0]->getType()) {
         tokens.erase(tokens.begin());
+        delete tokens[0];
     } else {
         throw tokens[0];
     }
@@ -42,8 +42,9 @@ void Datalog::parser(vector<Token*> input) {
         cout << "Success!\n";
         print();
     }
-    catch (Token *T) {
-        cout << "Failure!\n" << tokens[0]->toString(); //TODO double check tostring()
+    catch (Token *error) { //Looks like Failure is being called anyways
+        cout << "Failure!\n";
+        cout << tokens[0]->toString(); //TODO double check correct index
     }
 }
 

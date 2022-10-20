@@ -22,13 +22,12 @@ public:
         this->input = input;
         CreateAutomata();
         Run();
-
     }
     ~Lexer();
 
-    vector<Token*> getLexer();
+    const vector<Token*> &getLexer() const;
 
-    void Run();
+    vector<struct Token *> Run();
 
     static void print(vector <Token*> const &input);
 };
