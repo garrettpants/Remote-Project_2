@@ -111,17 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named 236_Project_1
+# Target rules for targets named 236_Project_2
 
 # Build rule for target.
-236_Project_1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 236_Project_1
-.PHONY : 236_Project_1
+236_Project_2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 236_Project_2
+.PHONY : 236_Project_2
 
 # fast build rule for target.
-236_Project_1/fast:
-	$(MAKE) -f CMakeFiles/236_Project_1.dir/build.make CMakeFiles/236_Project_1.dir/build
-.PHONY : 236_Project_1/fast
+236_Project_2/fast:
+	$(MAKE) -f CMakeFiles/236_Project_2.dir/build.make CMakeFiles/236_Project_2.dir/build
+.PHONY : 236_Project_2/fast
+
+Datalog.o: Datalog.cpp.o
+
+.PHONY : Datalog.o
+
+# target to build an object file
+Datalog.cpp.o:
+	$(MAKE) -f CMakeFiles/236_Project_2.dir/build.make CMakeFiles/236_Project_2.dir/Datalog.cpp.o
+.PHONY : Datalog.cpp.o
+
+Datalog.i: Datalog.cpp.i
+
+.PHONY : Datalog.i
+
+# target to preprocess a source file
+Datalog.cpp.i:
+	$(MAKE) -f CMakeFiles/236_Project_2.dir/build.make CMakeFiles/236_Project_2.dir/Datalog.cpp.i
+.PHONY : Datalog.cpp.i
+
+Datalog.s: Datalog.cpp.s
+
+.PHONY : Datalog.s
+
+# target to generate assembly for a file
+Datalog.cpp.s:
+	$(MAKE) -f CMakeFiles/236_Project_2.dir/build.make CMakeFiles/236_Project_2.dir/Datalog.cpp.s
+.PHONY : Datalog.cpp.s
 
 Lexer.o: Lexer.cpp.o
 
@@ -129,7 +156,7 @@ Lexer.o: Lexer.cpp.o
 
 # target to build an object file
 Lexer.cpp.o:
-	$(MAKE) -f CMakeFiles/236_Project_1.dir/build.make CMakeFiles/236_Project_1.dir/Lexer.cpp.o
+	$(MAKE) -f CMakeFiles/236_Project_2.dir/build.make CMakeFiles/236_Project_2.dir/Lexer.cpp.o
 .PHONY : Lexer.cpp.o
 
 Lexer.i: Lexer.cpp.i
@@ -138,7 +165,7 @@ Lexer.i: Lexer.cpp.i
 
 # target to preprocess a source file
 Lexer.cpp.i:
-	$(MAKE) -f CMakeFiles/236_Project_1.dir/build.make CMakeFiles/236_Project_1.dir/Lexer.cpp.i
+	$(MAKE) -f CMakeFiles/236_Project_2.dir/build.make CMakeFiles/236_Project_2.dir/Lexer.cpp.i
 .PHONY : Lexer.cpp.i
 
 Lexer.s: Lexer.cpp.s
@@ -147,35 +174,8 @@ Lexer.s: Lexer.cpp.s
 
 # target to generate assembly for a file
 Lexer.cpp.s:
-	$(MAKE) -f CMakeFiles/236_Project_1.dir/build.make CMakeFiles/236_Project_1.dir/Lexer.cpp.s
+	$(MAKE) -f CMakeFiles/236_Project_2.dir/build.make CMakeFiles/236_Project_2.dir/Lexer.cpp.s
 .PHONY : Lexer.cpp.s
-
-Parser.o: Parser.cpp.o
-
-.PHONY : Parser.o
-
-# target to build an object file
-Parser.cpp.o:
-	$(MAKE) -f CMakeFiles/236_Project_1.dir/build.make CMakeFiles/236_Project_1.dir/Parser.cpp.o
-.PHONY : Parser.cpp.o
-
-Parser.i: Parser.cpp.i
-
-.PHONY : Parser.i
-
-# target to preprocess a source file
-Parser.cpp.i:
-	$(MAKE) -f CMakeFiles/236_Project_1.dir/build.make CMakeFiles/236_Project_1.dir/Parser.cpp.i
-.PHONY : Parser.cpp.i
-
-Parser.s: Parser.cpp.s
-
-.PHONY : Parser.s
-
-# target to generate assembly for a file
-Parser.cpp.s:
-	$(MAKE) -f CMakeFiles/236_Project_1.dir/build.make CMakeFiles/236_Project_1.dir/Parser.cpp.s
-.PHONY : Parser.cpp.s
 
 main.o: main.cpp.o
 
@@ -183,7 +183,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/236_Project_1.dir/build.make CMakeFiles/236_Project_1.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/236_Project_2.dir/build.make CMakeFiles/236_Project_2.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -192,7 +192,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/236_Project_1.dir/build.make CMakeFiles/236_Project_1.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/236_Project_2.dir/build.make CMakeFiles/236_Project_2.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -201,7 +201,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/236_Project_1.dir/build.make CMakeFiles/236_Project_1.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/236_Project_2.dir/build.make CMakeFiles/236_Project_2.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -212,13 +212,13 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... 236_Project_1"
+	@echo "... 236_Project_2"
+	@echo "... Datalog.o"
+	@echo "... Datalog.i"
+	@echo "... Datalog.s"
 	@echo "... Lexer.o"
 	@echo "... Lexer.i"
 	@echo "... Lexer.s"
-	@echo "... Parser.o"
-	@echo "... Parser.i"
-	@echo "... Parser.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -44,6 +44,11 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/users/guest/g/gvance00/CLionRemote/236 Project_2/./Lab1PassOffCases/1-70,"/>
+					<Add directory="/users/guest/g/gvance00/CLionRemote/236 Project_2/Lab1PassOffCases/1-90,"/>
+					<Add directory="/users/guest/g/gvance00/CLionRemote/236 Project_2/Lab1PassOffCases/1-100,"/>
+					<Add directory="/users/guest/g/gvance00/CLionRemote/236 Project_2/Lab2PassOffCases/2-80,"/>
+					<Add directory="/users/guest/g/gvance00/CLionRemote/236 Project_2/Lab2PassOffCases/2-100"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -66,6 +71,11 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/users/guest/g/gvance00/CLionRemote/236 Project_2/./Lab1PassOffCases/1-70,"/>
+					<Add directory="/users/guest/g/gvance00/CLionRemote/236 Project_2/Lab1PassOffCases/1-90,"/>
+					<Add directory="/users/guest/g/gvance00/CLionRemote/236 Project_2/Lab1PassOffCases/1-100,"/>
+					<Add directory="/users/guest/g/gvance00/CLionRemote/236 Project_2/Lab2PassOffCases/2-80,"/>
+					<Add directory="/users/guest/g/gvance00/CLionRemote/236 Project_2/Lab2PassOffCases/2-100"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -82,6 +92,72 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Add.h">
+			<Option target="236_Project_2"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Automaton.h">
+			<Option target="236_Project_2"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Colon.h">
+			<Option target="236_Project_2"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/ColonDash.h">
+			<Option target="236_Project_2"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Comma.h">
+			<Option target="236_Project_2"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Comment.h">
+			<Option target="236_Project_2"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Datalog.cpp">
+			<Option target="236_Project_2"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Datalog.h">
+			<Option target="236_Project_2"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Facts.h">
+			<Option target="236_Project_2"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/ID.h">
+			<Option target="236_Project_2"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Left_Paren.h">
+			<Option target="236_Project_2"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Lexer.cpp">
+			<Option target="236_Project_2"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Lexer.h">
+			<Option target="236_Project_2"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Multiply.h">
+			<Option target="236_Project_2"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Period.h">
+			<Option target="236_Project_2"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Q_Mark.h">
+			<Option target="236_Project_2"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Queries.h">
+			<Option target="236_Project_2"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Right_Paren.h">
+			<Option target="236_Project_2"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Rules.h">
+			<Option target="236_Project_2"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Schemes.h">
+			<Option target="236_Project_2"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/String.h">
+			<Option target="236_Project_2"/>
+		</Unit>
+		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/Token.h">
+			<Option target="236_Project_2"/>
+		</Unit>
 		<Unit filename="/users/guest/g/gvance00/CLionRemote/236 Project_2/main.cpp">
 			<Option target="236_Project_2"/>
 		</Unit>

@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "236_Project_2"
   "236_Project_2.pdb"
+  "CMakeFiles/236_Project_2.dir/Datalog.cpp.o"
+  "CMakeFiles/236_Project_2.dir/Lexer.cpp.o"
   "CMakeFiles/236_Project_2.dir/main.cpp.o"
 )
 

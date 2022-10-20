@@ -1,0 +1,198 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Add.h
+Automaton.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Automaton.h
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Automaton.h
+Token.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Token.h
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Colon.h
+Automaton.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Automaton.h
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/ColonDash.h
+Automaton.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Automaton.h
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Comma.h
+Automaton.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Automaton.h
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Comment.h
+Automaton.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Automaton.h
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Datalog.h
+vector
+-
+Token.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Token.h
+Parameter.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Parameter.h
+Predicate.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Predicate.h
+P2Rules.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/P2Rules.h
+set
+-
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Facts.h
+Automaton.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Automaton.h
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/ID.h
+Automaton.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Automaton.h
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Left_Paren.h
+Automaton.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Automaton.h
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Lexer.cpp
+Colon.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Colon.h
+ColonDash.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/ColonDash.h
+Comma.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Comma.h
+Period.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Period.h
+Q_Mark.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Q_Mark.h
+Left_Paren.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Left_Paren.h
+Right_Paren.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Right_Paren.h
+Multiply.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Multiply.h
+Add.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Add.h
+Schemes.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Schemes.h
+Facts.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Facts.h
+Rules.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Rules.h
+Queries.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Queries.h
+ID.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/ID.h
+String.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/String.h
+Comment.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Comment.h
+Automaton.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Automaton.h
+Token.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Token.h
+Lexer.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Lexer.h
+vector
+-
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Lexer.h
+vector
+-
+Automaton.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Automaton.h
+Token.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Token.h
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Multiply.h
+Automaton.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Automaton.h
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/P2Rules.h
+string
+-
+sstream
+-
+iostream
+-
+ostream
+-
+vector
+-
+Parameter.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Parameter.h
+Predicate.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Predicate.h
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Parameter.h
+string
+-
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Period.h
+Automaton.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Automaton.h
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Predicate.h
+string
+-
+sstream
+-
+ostream
+-
+vector
+-
+Parameter.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Parameter.h
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Q_Mark.h
+Automaton.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Automaton.h
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Queries.h
+Automaton.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Automaton.h
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Right_Paren.h
+Automaton.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Automaton.h
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Rules.h
+Automaton.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Automaton.h
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Schemes.h
+Automaton.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Automaton.h
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/String.h
+Automaton.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Automaton.h
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Token.h
+string
+-
+iostream
+-
+sstream
+-
+
+/users/guest/g/gvance00/CLionRemote/236 Project_2/main.cpp
+iostream
+-
+string
+-
+fstream
+-
+unistd.h
+-
+sstream
+-
+Lexer.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Lexer.h
+Lexer.cpp
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Lexer.cpp
+Datalog.h
+/users/guest/g/gvance00/CLionRemote/236 Project_2/Datalog.h
+

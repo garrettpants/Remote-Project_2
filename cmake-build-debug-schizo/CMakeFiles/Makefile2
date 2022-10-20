@@ -53,7 +53,7 @@ CMAKE_BINARY_DIR = "/users/guest/g/gvance00/CLionRemote/236 Project_2/cmake-buil
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/236_Project_1.dir/all
+all: CMakeFiles/236_Project_2.dir/all
 
 .PHONY : all
 
@@ -63,36 +63,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/236_Project_1.dir/clean
+clean: CMakeFiles/236_Project_2.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/236_Project_1.dir
+# Target rules for target CMakeFiles/236_Project_2.dir
 
 # All Build rule for target.
-CMakeFiles/236_Project_1.dir/all:
-	$(MAKE) -f CMakeFiles/236_Project_1.dir/build.make CMakeFiles/236_Project_1.dir/depend
-	$(MAKE) -f CMakeFiles/236_Project_1.dir/build.make CMakeFiles/236_Project_1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/users/guest/g/gvance00/CLionRemote/236 Project_2/cmake-build-debug-schizo/CMakeFiles" --progress-num=1,2,3,4 "Built target 236_Project_1"
-.PHONY : CMakeFiles/236_Project_1.dir/all
+CMakeFiles/236_Project_2.dir/all:
+	$(MAKE) -f CMakeFiles/236_Project_2.dir/build.make CMakeFiles/236_Project_2.dir/depend
+	$(MAKE) -f CMakeFiles/236_Project_2.dir/build.make CMakeFiles/236_Project_2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/users/guest/g/gvance00/CLionRemote/236 Project_2/cmake-build-debug-schizo/CMakeFiles" --progress-num=1,2,3,4 "Built target 236_Project_2"
+.PHONY : CMakeFiles/236_Project_2.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/236_Project_1.dir/rule: cmake_check_build_system
+CMakeFiles/236_Project_2.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start "/users/guest/g/gvance00/CLionRemote/236 Project_2/cmake-build-debug-schizo/CMakeFiles" 4
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/236_Project_1.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/236_Project_2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/users/guest/g/gvance00/CLionRemote/236 Project_2/cmake-build-debug-schizo/CMakeFiles" 0
-.PHONY : CMakeFiles/236_Project_1.dir/rule
+.PHONY : CMakeFiles/236_Project_2.dir/rule
 
 # Convenience name for target.
-236_Project_1: CMakeFiles/236_Project_1.dir/rule
+236_Project_2: CMakeFiles/236_Project_2.dir/rule
 
-.PHONY : 236_Project_1
+.PHONY : 236_Project_2
 
 # clean rule for target.
-CMakeFiles/236_Project_1.dir/clean:
-	$(MAKE) -f CMakeFiles/236_Project_1.dir/build.make CMakeFiles/236_Project_1.dir/clean
-.PHONY : CMakeFiles/236_Project_1.dir/clean
+CMakeFiles/236_Project_2.dir/clean:
+	$(MAKE) -f CMakeFiles/236_Project_2.dir/build.make CMakeFiles/236_Project_2.dir/clean
+.PHONY : CMakeFiles/236_Project_2.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

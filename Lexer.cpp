@@ -76,7 +76,9 @@ void Lexer::Run() {
         }
         else if (maxRead > 0) {
             Token* AB = maxAutomaton->CreateToken(input.substr(0, maxRead), lineNum);
-            tokens.push_back(AB);
+            if (AB->getType() != TokenType::COMMENT) {
+                tokens.push_back(AB);
+            }
             lineNum += maxAutomaton->NewLinesRead();
         }
         input.erase(0, maxRead);

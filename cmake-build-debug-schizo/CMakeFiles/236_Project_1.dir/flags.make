@@ -6,5 +6,5 @@ CXX_FLAGS = -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I"/users/guest/g/gvance00/CLionRemote/236 Project_2/./Lab1PassOffCases/1-70," -I"/users/guest/g/gvance00/CLionRemote/236 Project_2/Lab1PassOffCases/1-90," -I"/users/guest/g/gvance00/CLionRemote/236 Project_2/Lab1PassOffCases/1-100," -I"/users/guest/g/gvance00/CLionRemote/236 Project_2/Lab2PassOffCases/2-80," -I"/users/guest/g/gvance00/CLionRemote/236 Project_2/Lab2PassOffCases/2-100" 
 

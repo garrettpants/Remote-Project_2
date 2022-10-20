@@ -5,7 +5,7 @@
 #include <sstream>
 #include "Lexer.h"
 #include "Lexer.cpp"
-#include "Parser.h"
+#include "Datalog.h"
 
 
 using namespace std;
@@ -19,8 +19,8 @@ using std::endl; using std::string;
 
 int main(int argc, char** argv) {
 
-    char tmp[256];
-    getcwd(tmp, 256);
+    //char tmp[256];
+    //getcwd(tmp, 256);
     //cout << "Current working directory: " << tmp << endl;
 
     ifstream input(argv[1]);
@@ -38,8 +38,8 @@ int main(int argc, char** argv) {
     }*/
 
     Lexer* lexer = new Lexer(str);
-
-    Parser* parser = new Parser(lexer->getLexer());
+    auto* datalog = new Datalog();
+    datalog->parser(lexer->getLexer());
     delete lexer;
 
     return 0;
