@@ -12,11 +12,10 @@ Datalog::~Datalog() {
 }
 
 void Datalog::match(TokenType type) {
-    if (type == tokens[0]->getType()) {
-        tokens.erase(tokens.begin());
-        delete tokens[0];
+    if (type == tokens[index]->getType()) {
+        index++;
     } else {
-        throw tokens[0];
+        throw tokens[index];
     }
 };
 
@@ -44,36 +43,36 @@ void Datalog::parser(vector<Token*> input) {
     }
     catch (Token *error) { //Looks like Failure is being called anyways
         cout << "Failure!\n";
-        cout << tokens[0]->toString(); //TODO double check correct index
+        cout << tokens[index]->toString(); //TODO double check correct index
     }
 }
 
 void Datalog::print() {
-    //schemes****************************************************
+    //schemes
     int countScheme = schemes.size();
     cout << "Schemes(" << countScheme << "):\n";
     for (Predicate* schemes1: schemes) {
         cout << "  " << schemes1->predToString() << '\n';
     }
-    //facts****************************************************
+    //facts
     int countFact = facts.size();
     cout << "Facts(" << countFact << "):\n";
     for (Predicate* facts1: facts) {
         cout << "  " << facts1->predToString() << '.'<< '\n';
     }
-    //rules****************************************************
+    //rules
     int countRule = rules.size();
     cout << "Rules(" << countRule << "):\n";
     for (P2Rules* rules1: rules) {
         cout << rules1->ruleToString() << '.' << '\n';
     }
-    //queries****************************************************
+    //queries
     int countQueries = queries.size();
     cout << "Queries(" << countQueries << "):\n";
     for (Predicate* queries1: queries) {
         cout << "  " << queries1->predToString() << "?" << '\n';
     }
-    //domain****************************************************
+    //domain
     int countDomain = domain.size();
     cout << "Domain(" << countDomain << "):\n";
     //Todo for each Predicate in the facts, Take all the parameters in the predicate and push them onto the set
@@ -83,17 +82,18 @@ void Datalog::print() {
 }
 
 TokenType Datalog::peek() {
-    return tokens[1]->getType();
+    tokens[index+1];
+    return tokens[index]->getType();
 }
 
 void Datalog::scheme() {
     match(TokenType::ID);
     Predicate* newPred = new Predicate;
-    newPred->addID(tokens[0]->getDescription());
+    newPred->addID(tokens[index-1]->getDescription());
     match(TokenType::LEFT_PAREN);
 
     if (peek()==TokenType::ID) {
-        Parameter* parameter1 = new Parameter(tokens[0]->getDescription());
+        Parameter* parameter1 = new Parameter(tokens[index]->getDescription());
         newPred->stringPredAdd(parameter1);
     }
     match(TokenType::ID);
@@ -114,10 +114,10 @@ void Datalog::schemeList() {
 void Datalog::fact() {
     match(TokenType::ID);
     Predicate* newPred = new Predicate;
-    newPred->addID(tokens[0]->getDescription()); //TODO check if you need to adjust tokens[x]
+    newPred->addID(tokens[index-1]->getDescription()); //TODO check if you need to adjust tokens[x]
     match(TokenType::LEFT_PAREN);
     if (peek() == TokenType::STRING) {
-        Parameter* parameter1 = new Parameter(tokens[0]->getDescription());
+        Parameter* parameter1 = new Parameter(tokens[index]->getDescription());
         domain.insert(parameter1->parToString());
         newPred->stringPredAdd(parameter1);
     }
@@ -130,7 +130,7 @@ void Datalog::fact() {
 }
 
 void Datalog::factList() {
-    if (peek() == TokenType::COLON) {
+    if (peek() == TokenType::RULES) { //the bane of my existence
         return;
     } else {
         fact();
@@ -188,7 +188,7 @@ void Datalog::stringList(Predicate* predPtr) {
     } else {
         match(TokenType::COMMA);
         if(peek() == TokenType::STRING) {
-            Parameter* p = new Parameter(tokens[0]->getDescription());
+            Parameter* p = new Parameter(tokens[index]->getDescription());
             domain.insert(p->parToString());
             predPtr->stringPredAdd(p);
         }
@@ -203,7 +203,7 @@ void Datalog::idList(Predicate* predPtr) {
     } else {
         match(TokenType::COMMA);
         if (peek() == TokenType::ID) {
-            Parameter* p = new Parameter(tokens[0]->getDescription());
+            Parameter* p = new Parameter(tokens[index]->getDescription());
             predPtr->stringPredAdd(p);
         }
         match(TokenType::ID);
@@ -213,12 +213,12 @@ void Datalog::idList(Predicate* predPtr) {
 
 void Datalog::headPredicate(Predicate *predPtr) {
     if (peek() == TokenType::ID) {
-        predPtr->addID(tokens[0]->getDescription());
+        predPtr->addID(tokens[index]->getDescription());
     }
     match(TokenType::ID);
     match(TokenType::LEFT_PAREN);
     if (peek() == TokenType::ID) {
-        Parameter* p = new Parameter(tokens[0]->getDescription());
+        Parameter* p = new Parameter(tokens[index]->getDescription());
         predPtr->stringPredAdd(p);
     }
     match(TokenType::ID);
@@ -228,7 +228,7 @@ void Datalog::headPredicate(Predicate *predPtr) {
 
 void Datalog::predicate(Predicate* predPtr) {
     if (peek() == TokenType::ID) {
-        predPtr->addID(tokens[0]->getDescription());
+        predPtr->addID(tokens[index]->getDescription());
     }
     match(TokenType::ID);
     match(TokenType::LEFT_PAREN);
@@ -250,15 +250,15 @@ void Datalog::predicateList(P2Rules *rules1) {
 }
 
 void Datalog::parameter(Predicate* predPtr) {
-    if (tokens[0]->getType() == TokenType::ID) {
+    if (tokens[index]->getType() == TokenType::ID) {
         if (peek() == TokenType::ID) {
-            Parameter* p = new Parameter(tokens[0]->getDescription());
+            Parameter* p = new Parameter(tokens[index]->getDescription());
             predPtr->stringPredAdd(p);
         }
         match(TokenType::ID);
     } else {
         if (peek() == TokenType::STRING) {
-            Parameter* parameter1 = new Parameter(tokens[0]->getDescription());
+            Parameter* parameter1 = new Parameter(tokens[index]->getDescription());
             predPtr->stringPredAdd(parameter1);
         }
         match(TokenType::STRING);

@@ -13,7 +13,8 @@
 #include <set>
 
 class Datalog {
-
+protected:
+    unsigned int index = 0;
 public:
     Datalog(){};
     vector<Predicate*> facts;
